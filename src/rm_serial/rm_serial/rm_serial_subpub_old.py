@@ -82,7 +82,7 @@ class Rotate_Data_Rx:
 
 # 定义帧头和命令字
 HEADER = 0xAA
-CMD_ID_AUTOAIM_DATA_RX = 0x81
+CMD_ID_AUTOAIM_DATA_RX= 0x81
 CMD_ID_CHASSIS_DATA_RX = 0x82
 CMD_ID_ROTATE_DATA_RX = 0x85
 # 打包结构体为字节流
@@ -523,7 +523,7 @@ def receive_message():
                 gimbal_msg.roll  = result[1]
                 gimbal_msg.pitch= result[2]
                     # 发布消息
-                #print(gimbal_msg.yaw)
+                print(gimbal_msg.yaw)
                 
             except:
                 #pass
